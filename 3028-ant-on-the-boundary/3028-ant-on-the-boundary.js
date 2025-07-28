@@ -3,13 +3,13 @@
  * @return {number}
  */
 var returnToBoundaryCount = function(nums) {
+    let position=0;
     let boundary=0;
-    let times=0;
     nums.forEach(element => {
-     boundary+=element
-     if(boundary==0)
-        times+=1      
+     position+=element
+     if(position==0)
+        boundary+=1      
     });
      
-     return times
+     return boundary
 };
