@@ -11,8 +11,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
         let median = sorted[sorted.length/2]+sorted[(sorted.length/2)-1]
         return median/2
     }
-    else if(sorted.length%2!==0){
+    else{
         return sorted[Math.floor(sorted.length/2)]
     }
-    else return
 };
