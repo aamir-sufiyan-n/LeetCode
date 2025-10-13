@@ -9,9 +9,8 @@ var countPairs = function(nums, k) {
     {
         for(let j=i+1;j<nums.length;j++)
         {
-            if(nums[i]==nums[j]&&(i*j)%k==0)
-            count++
-
+            if(nums[i]==nums[j]&&(i*j)%k==0){
+            count++}
         }
     }
     return count
