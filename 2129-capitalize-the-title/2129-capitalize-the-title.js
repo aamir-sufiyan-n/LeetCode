@@ -3,20 +3,12 @@
  * @return {string}
  */
 var capitalizeTitle = function(title) {
-    let words=title.split(" ")
-    let result=[]
-    words.forEach((w)=>
-    {
-        if(w.length<=2)
-        {
-            let s=w.toLowerCase()
-            return result.push(s)
-        }
-        else{
-            let s=w[0].toUpperCase()+w.slice(1).toLowerCase()
-            return result.push(s)
-        }
-    })
+return title.split(" ").map((word)=>
+{
+    if(word.length<=2)
+    return word.toLowerCase()
+    else
+    return word[0].toUpperCase()+word.slice(1).toLowerCase()
+}).join(" ")
 
-    return result.join(' ')
 };
