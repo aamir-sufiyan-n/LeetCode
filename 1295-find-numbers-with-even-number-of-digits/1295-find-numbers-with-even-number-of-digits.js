@@ -3,9 +3,5 @@
  * @return {number}
  */
 var findNumbers = function(nums) {
-    let count=0
-    nums.forEach((element)=>{
-        if(String(element).length%2==0)
-        count++})
-    return count
+    return nums.filter((num)=>String(num).length%2==0).length
 };
