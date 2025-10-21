@@ -6,7 +6,7 @@ var sortedSquares = function(nums) {
     let result=[]
     for(let i=0;i<nums.length;i++)
     {
-        result.push(Math.abs(nums[i]*=nums[i]))
+        result.push(nums[i]**2)
     }
     return result.sort((a,b)=>a-b)
 };
