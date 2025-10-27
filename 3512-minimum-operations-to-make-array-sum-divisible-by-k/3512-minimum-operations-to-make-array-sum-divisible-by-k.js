@@ -4,12 +4,10 @@
  * @return {number}
  */
 var minOperations = function(nums, k) {
-    let count=0
-    let a=nums.reduce((a,b)=>a+b,0)
-    while(a%k!==0)
+    let sum=0
+    for(let i=0;i<nums.length;i++)
     {
-        a--
-        count++
+        sum+=nums[i]
     }
-    return count
+    return sum%k
 };
