@@ -10,8 +10,7 @@ var canPlaceFlowers = function(flowerbed, n) {
     if(beds[i]+beds[i+1]+beds[i-1]==0)
     {
        n-- 
-       beds[i]=1
-       if(n<=0) break    
+       beds[i]=1    
        }
     }
      return n<=0
