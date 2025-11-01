@@ -1,10 +1,12 @@
 func getSneakyNumbers(nums []int) []int {
    result:=[]int{}
-   for i:=0;i<len(nums);i++{
-    for j:=i+1;j<len(nums);j++{
-        if nums[i]==nums[j]{
-            result=append(result,nums[i])
-        }
+   nos:=make(map[int]int)
+   for _,v:= range nums{
+    nos[v]++
+   }
+   for num,count:=range nos{
+    if count>1{
+        result=append(result,num)
     }
    }
    return result
