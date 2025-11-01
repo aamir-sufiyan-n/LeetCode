@@ -10,7 +10,7 @@ func modifiedList(nums []int, head *ListNode) *ListNode {
     start:=&ListNode{Next:head}
     current:=start
 
-    check:=make(map[int]bool)
+    check:=make(map[int]bool,len(nums))
     for _,v:= range nums{
         check[v]=true
     }
