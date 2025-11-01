@@ -7,18 +7,33 @@
  */
 func modifiedList(nums []int, head *ListNode) *ListNode {
 
-    start:=&ListNode{Next:head}
-    current:=start
+    // start:=&ListNode{Next:head}
+    // current:=start
 
-    check:=make(map[int]bool,len(nums))
-    for _,v:= range nums{
+    // check:=make(map[int]bool,len(nums))
+    // for _,v:= range nums{
+    //     check[v]=true
+    // }
+    // for current!=nil{
+    //     if current.Next!=nil&&check[current.Next.Val] {
+    //     current.Next=current.Next.Next}else{
+    //     current=current.Next}
+    // }
+    // return start.Next
+
+    check:=make(map[int]bool)
+    for _,v:=range nums{
         check[v]=true
     }
-    for current!=nil{
-        if current.Next!=nil&&check[current.Next.Val] {
-        current.Next=current.Next.Next}else{
-        current=current.Next}
+    for head!=nil&&check[head.Val]{
+        head=head.Next
     }
-    return start.Next
+    current:=head
+    for current!=nil{
+        if current.Next!=nil&&check[current.Next.Val]{
+            current.Next=current.Next.Next
+        }else{current=current.Next}
+    }
+    return head
 
 }
