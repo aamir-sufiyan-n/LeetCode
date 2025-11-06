@@ -1,12 +1,9 @@
 func maxFreqSum(s string) int {
-    tracker:=make(map[string]int)
-    for _,ch:= range s{
-        strch:=string(ch)
-        tracker[strch]++
-    }
-    vowel:= map[string]bool{
-        "a":true, "e":true ,"i":true, "o":true, "u":true,
-        "A":true, "E":true ,"I":true, "O":true, "U":true,
+    tracker:=make(map[rune]int)
+    for _,ch:= range s { tracker[ch]++ }
+    vowel:= map[rune]bool{
+        'a':true, 'e':true ,'i':true, 'o':true, 'u':true,
+        'A':true, 'E':true ,'I':true, 'O':true, 'U':true,
     }
     vowo:=0
     leto:=0
@@ -16,5 +13,4 @@ func maxFreqSum(s string) int {
         }else if !vowel[ch] && freq>leto{leto=freq} 
     }
     return vowo+leto
-    
 }
