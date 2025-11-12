@@ -3,9 +3,8 @@ func findDuplicates(nums []int) []int {
     count:=make(map[int]int)
     for _,num:=range nums {
         count[num]++
+        if val,found:= count[num]; found && val==2 {res=append(res,num)}
     }
-    for n,c:= range count{
-        if c>1{res=append(res,n)}
-    }
+    
     return res
 }
