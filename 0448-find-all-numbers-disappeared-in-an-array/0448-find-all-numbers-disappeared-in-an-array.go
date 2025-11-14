@@ -1,4 +1,14 @@
 func findDisappearedNumbers(nums []int) []int {
+    // res:=[]int{}
+    // track:=make(map[int]bool)
+    // for _,n:=range nums{
+    //     track[n]=true
+    // }
+    // for i:=1;i<=len(nums);i++{
+    //     if !track[i]{res=append(res,i)}
+    // }
+    // return res
+
     res:=[]int{}
     for _,num:=range nums{
         index:=abs(num)-1
@@ -9,8 +19,9 @@ func findDisappearedNumbers(nums []int) []int {
     }
     return res
 }
+
 func abs(x int)int{
-    if x<0 {return x*-1}
+    if x<0{return x*-1}
     return x
 }
 
