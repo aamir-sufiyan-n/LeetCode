@@ -9,7 +9,7 @@ func findDisappearedNumbers(nums []int) []int {
     // }
     // return res
 
-    res:=[]int{}
+    res:=[]int{}               
     for _,num:=range nums{
         index:=abs(num)-1
         if nums[index]>0{nums[index]*=-1}
