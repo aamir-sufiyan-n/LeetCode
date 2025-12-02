@@ -1,0 +1,3 @@
+-- Write your PostgreSQL query statement below
+UPDATE SALARY
+SET sex = CASE WHEN sex='f' THEN 'm' WHEN sex='m' THEN 'f' ELSE sex  END;
