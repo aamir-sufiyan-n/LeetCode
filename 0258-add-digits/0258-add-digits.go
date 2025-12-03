@@ -1,7 +1,7 @@
 func addDigits(num int) int {
     if num<10 {return num}
-    num1:=num%10
+    n:=num%10
     num/=10
-    res:=num1+num
+    res:=num+n
     return addDigits(res)
 }
