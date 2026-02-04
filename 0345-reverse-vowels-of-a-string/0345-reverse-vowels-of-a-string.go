@@ -1,20 +1,23 @@
 func reverseVowels(s string) string {
+    wovels:=map[rune]bool{
+        'a':true,'A':true,
+        'e':true,'E':true,
+        'i':true,'I':true,
+        'o':true,'O':true,
+        'u':true,'U':true,
+    }
     r:=[]rune(s)
-    wovels:=[]rune{'a','A','e','E','i','I','o','O','u','U'}
     i:=0
     j:=len(r)-1
     for i<=j{
-        if slices.Contains(wovels,r[i])&&slices.Contains(wovels,r[j]){
+        if wovels[r[i]] && wovels[r[j]]{
             r[i],r[j]=r[j],r[i]
             i++
             j--
-        }else if slices.Contains(wovels,r[i]){
-            j--}else if slices.Contains(wovels,r[j]){
+        }else if wovels[r[i]] { j-- } else if wovels[r[j]] {
+             i++ }else{
                 i++
-            }else{
-                i++
-                j--
-            } 
+                j-- } 
     }
     return string(r)
 }
