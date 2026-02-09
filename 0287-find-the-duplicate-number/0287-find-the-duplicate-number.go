@@ -6,7 +6,6 @@ func findDuplicate(nums []int) int {
     // }
     // return -1
 
-    //will learn floyd's later
      i:=0
      for i<len(nums){
         if nums[i]==i{continue}
@@ -14,4 +13,5 @@ func findDuplicate(nums []int) int {
         nums[i],nums[nums[i]]=nums[nums[i]],nums[i]
      }
      return -1
+    //will learn floyd's later
 }
