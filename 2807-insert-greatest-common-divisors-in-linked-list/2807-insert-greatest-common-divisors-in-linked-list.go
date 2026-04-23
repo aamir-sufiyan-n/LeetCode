@@ -8,9 +8,7 @@
 func insertGreatestCommonDivisors(head *ListNode) *ListNode {
     current:=head
     for current!=nil && current.Next!=nil{
-        val:=gcd(current.Val,current.Next.Val)
-        node:=&ListNode{Val:val}
-        node.Next=current.Next
+        node:=&ListNode{Val:gcd(current.Val,current.Next.Val),Next:current.Next}
         current.Next=node
         current=node.Next
     }
