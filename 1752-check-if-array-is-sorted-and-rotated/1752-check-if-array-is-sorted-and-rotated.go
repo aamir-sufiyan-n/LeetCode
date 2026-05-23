@@ -5,7 +5,8 @@ func check(nums []int) bool {
             count++
         }
     }
-    if count ==1 && nums[len(nums)-1]<=nums[0]{return true}
-    if count==0{ return true }
-    return false
+    if nums[0]<nums[len(nums)-1]{
+        count++
+    }
+    return count<=1
 }
