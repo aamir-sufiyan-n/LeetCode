@@ -1,14 +1,13 @@
 func leftRightDifference(nums []int) []int {
-    leftSum:=0
-    rightSum:=Sum(nums)
-    
-    var total = []int{}
-    for _,n:=range nums{
-        rightSum-=n
-        total=append(total,abs(rightSum-leftSum))
-        leftSum+=n
-    }
-    return total
+  leftSum:=0
+  rightSum:=Sum(nums)
+  var total []int
+  for _,n:=range nums{
+    rightSum-=n
+    total=append(total,abs(rightSum-leftSum))
+    leftSum+=n
+  }
+  return total 
 }
 func abs(n int)int{
     if n<0{ return n *-1 }
