@@ -7,9 +7,7 @@ func countCommas(n int64) int64 {
         999999999999,
         999999999999999,
     }{
-        if n>x{
-            ans+=n-x
-        }
+        if n>x { ans += n-x }
     }
     return ans
 }
