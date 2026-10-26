@@ -1,13 +1,11 @@
 func pivotInteger(n int) int {
-    sum1:=0
-    sum2:=0
+    sum:=(n * (n+1))/2
     for i:=1;i<=n;i++{
-        sum1+=i
-        for j:=i;j<=n;j++{
-            sum2+=j
+        suml:= (i * (i+1))/2
+        sumr:= sum - (i*(i-1))/2
+        if suml == sumr{
+            return i
         }
-        if sum1==sum2{return i}
-        sum2=0
     }
-   return -1
+    return -1
 }
